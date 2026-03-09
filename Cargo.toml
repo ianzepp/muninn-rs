@@ -19,9 +19,9 @@ kernel = ["dep:muninn-kernel"]
 bridge = ["frames", "kernel", "dep:muninn-bridge"]
 
 [dependencies]
-muninn-frames = { path = "../muninn-frames", optional = true }
-muninn-kernel = { path = "../muninn-kernel", optional = true }
-muninn-bridge = { path = "../muninn-bridge", optional = true }
+muninn-frames = { git = "https://github.com/ianzepp/muninn-frames-rs.git", optional = true }
+muninn-kernel = { git = "https://github.com/ianzepp/muninn-kernel-rs.git", optional = true }
+muninn-bridge = { git = "https://github.com/ianzepp/muninn-bridge-rs.git", optional = true }
 
 [lints.clippy]
 pedantic = { level = "warn", priority = -1 }
