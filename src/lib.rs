@@ -9,5 +9,8 @@ pub use muninn_frames as frames;
 #[cfg(feature = "kernel")]
 pub use muninn_kernel as kernel;
 
+#[cfg(feature = "llm")]
+pub use muninn_llm as llm;
+
 #[cfg(feature = "bridge")]
 pub use muninn_bridge as bridge;

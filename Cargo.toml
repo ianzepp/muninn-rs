@@ -16,11 +16,13 @@ categories = ["asynchronous", "network-programming"]
 default = []
 frames = ["dep:muninn-frames"]
 kernel = ["dep:muninn-kernel"]
+llm = ["dep:muninn-llm"]
 bridge = ["frames", "kernel", "dep:muninn-bridge"]
 
 [dependencies]
 muninn-frames = { git = "https://github.com/ianzepp/muninn-frames-rs.git", optional = true }
 muninn-kernel = { git = "https://github.com/ianzepp/muninn-kernel-rs.git", optional = true }
+muninn-llm = { git = "https://github.com/ianzepp/muninn-llm-rs.git", optional = true }
 muninn-bridge = { git = "https://github.com/ianzepp/muninn-bridge-rs.git", optional = true }
 
 [lints.clippy]
