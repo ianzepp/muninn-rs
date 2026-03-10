@@ -6,6 +6,7 @@ Umbrella crate for the Muninn core family.
 
 - **`muninn-frames`** — wire frame model and protobuf codec
 - **`muninn-kernel`** — in-memory async routing and stream-first messaging
+- **`muninn-llm`** — LLM-facing syscalls, room coordination, and ReAct tool loops
 - **`muninn-bridge`** — strict boundary conversion between kernel and wire frames
 
 This crate contains no additional runtime behavior. It exists to pin a known-good set of core crate versions and re-export them behind feature flags.
@@ -44,6 +45,9 @@ pub use muninn_frames as frames;
 #[cfg(feature = "kernel")]
 pub use muninn_kernel as kernel;
 
+#[cfg(feature = "llm")]
+pub use muninn_llm as llm;
+
 #[cfg(feature = "bridge")]
 pub use muninn_bridge as bridge;
 ```
@@ -54,6 +58,7 @@ pub use muninn_bridge as bridge;
 |---|---|
 | `frames` | `muninn::frames` |
 | `kernel` | `muninn::kernel` |
+| `llm` | `muninn::llm` |
 | `bridge` | `muninn::bridge` plus `frames` and `kernel` |
 
 ## Usage
